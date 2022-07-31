@@ -1,0 +1,796 @@
+/*
+      ==============================
+               Public Styles            
+      ==============================
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* height: 3500px;  this help you to design*/
+ }
+
+.container {
+    width: 85%;
+    margin: auto;
+   
+}
+
+
+
+/*
+      ==============================
+               Navbar Styles           
+      ==============================
+*/
+.main-navbar{
+    position: relative;
+    height: 80px;
+}
+.main-navbar .navbar{
+    padding: 20px 0;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: 1px solid #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+} 
+
+.main-navbar .navbar .logo .logo-text{
+ font-size: 30px;
+ font-weight: bold;
+}
+
+.main-navbar .navbar input , .navbar label {
+    position: absolute;
+    top: 13px;
+    right: 25px;
+}
+
+.main-navbar .navbar input {
+    display: none;
+}
+
+.main-navbar .navbar label {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(../images/Navbar/open.png) no-repeat;
+    background-size: cover;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.main-navbar .navbar input:checked ~ .ul-list{
+    display: block;
+}
+
+.main-navbar .navbar input:checked ~ label{
+    background: url(../images/Navbar/close.png) no-repeat;
+    background-size: cover;
+}
+
+.main-navbar .navbar .logo{
+    width: 50%;
+    float: left;
+}
+
+
+.main-navbar .navbar .ul-list{
+    width:50%;
+    float: right;
+    list-style: none;
+}
+
+
+
+.main-navbar .navbar .ul-list .list-item {
+    display : inline-block;
+    
+}
+
+.main-navbar .navbar .ul-list .list-item a{
+display: block;
+color: #222;
+text-decoration: none;
+padding: 10px 15px;
+font-weight: bold;
+transition: 0.1s;
+}
+
+.main-navbar .navbar .ul-list .list-item a:hover {
+color: #eb5424
+
+}
+
+
+/* Media for Navbar Style */
+
+@media  screen and (min-width: 992px) {
+    .main-navbar .navbar label {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:991px) {
+
+    .main-navbar .navbar .logo{
+        width: 100%;
+        float: none;
+    }
+
+    .main-navbar .navbar .ul-list{
+        width: 100%;
+        float: none;
+        margin-top: 20px;
+        display: none
+    }
+
+    .main-navbar .navbar .ul-list .list-item {
+        display : block;
+        text-align: center;
+       
+        
+    }
+}
+
+/*
+      ==============================
+               Home Styles           
+      ==============================
+*/
+
+
+.home {
+    height: 500px;
+    background: url(../images/Home/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position:relative;
+}
+
+.home-information{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.home .home-information .home-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #5e5e5e;
+    margin-bottom: 20px;
+
+}
+
+.home .home-information .home-info{
+  font-size: 35px;
+  color: #eb5424;
+  margin-bottom: 20px;
+}
+
+
+.home .home-information .home-description{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.home .home-information .home-description .span-info{
+    color: #222;
+}
+
+.home .home-information .home-btn{
+    background-color:#eb5424 ;
+    color:#fff;
+    font-size: 18px;
+    width: 150px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.1s;
+    font-weight: bold;
+}
+
+
+.home .home-information .home-btn:hover{
+    background-color:#fff ;
+    color:#eb5424;
+}
+
+/* Media for Home Style */
+
+@media screen and (max-width:768px) {
+    
+    .home .home-information .home-title {
+        font-size: 40px;
+    }
+    .home .home-information .home-info{
+        font-size: 25px;
+    }
+    .home .home-information .home-description{
+        font-size: 15px;
+    }
+    
+    
+}
+
+/*
+      ==============================
+               Work Styles           
+      ==============================
+*/
+
+.work{
+    height: auto;
+    padding: 50px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.work .work-title{
+    font-size: 60px;
+    margin-bottom: 20px;
+
+}
+
+.work .work-title .work-span{
+    font-weight: normal;
+}
+
+.work .part{
+    width: 30%;
+    float: left;
+    height: auto;
+    padding: 100px 0px;
+    border: 1px solid #888;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.work .part.first{
+    margin-left: 0;
+}
+
+
+.work .part .icon{
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.work .part .part-title{
+    font-size: 25px;
+    color: #eb5424;
+    margin-bottom: 20px;
+}
+
+.work .part .line{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.work .part .part-desc{
+    font-size: 14px;
+    color: #888;
+    padding: 20px;
+}
+
+
+/* Media for Work Style */
+
+@media screen and (max-width:768px) {
+.work .part {
+    width: 47%;
+}   
+.work .part.last{
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+}
+
+@media screen and (max-width:575px) {
+    .work .part {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }   
+    .work .part.first{
+        margin-bottom: 20px;
+    }
+}
+
+
+/*
+      ==============================
+               Portofolio Styles           
+      ==============================
+*/
+
+.portfolio{
+    background-color: #f8f8f8;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.portfolio .portfolio-title{
+    text-align: center;
+    font-size: 35px;
+}
+
+.portfolio .portfolio-title .portfolio-span {
+    font-weight: normal;
+}
+
+.portfolio .portfolio-ul{
+    list-style: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.portfolio .portfolio-ul .portfolio-item{
+ display: inline-block;
+ width: 100px;
+ padding: 10px;
+}
+
+.portfolio .portfolio-ul .portfolio-item.active{
+background-color: #eb5424;
+color:#fff
+}
+
+.portfolio .box div{
+    width: 25%;
+    float: left;
+    font-size: 0;
+    position: relative;
+}
+
+.portfolio .box div img{
+    width:100%;
+}
+
+
+.portfolio .box div .overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom:0;
+    right: 0;
+    background-color: rgba(235,84,36,0.5);
+    font-size: 15px;
+    opacity: 0;
+}
+
+.portfolio .box div .overlay span {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #eb5424;
+}
+
+.box div :hover.overlay{
+opacity: 1;
+}
+
+
+/* Media for Portfolio Style */
+
+
+@media screen  and (max-width: 768px) {
+    
+.portfolio .box div{
+    width: 50%;
+}
+}
+
+
+@media screen and (max-width:575px) {
+    .portfolio .portfolio-ul .portfolio-item{
+        display: block; /*if we use display : block and need to make the things in center => use margin :auto*/
+        margin: auto;
+       }
+
+       .portfolio .box div{
+        width: 100%;
+       }
+    
+}
+
+
+/*
+      ==============================
+         Profile + Skills Styles           
+      ==============================
+*/
+
+.profile_skills{
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.profile_skills .profile{
+    width: 50%;
+    float: left;
+}
+
+.profile_skills .profile .profile-list{
+    list-style: none;
+}
+
+.profile_skills .profile .profile-list .profile-item{
+margin-bottom: 8px;
+}
+
+.profile_skills .profile .profile-list .profile-item span {
+    display: inline-block;
+    width:100px;
+    font-weight: bold;
+    
+}
+
+.profile_skills .profile .profile-list .profile-item span.web{
+    font-weight: normal;
+    color: #eb5424;
+}
+
+
+.profile_skills .skills{
+    width: 50%;
+    float: right;
+}
+
+.profile_skills .skills .skills-desc{
+    font-size: 15px;
+    color:#888;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.profile_skills .skills .bar{
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px;
+
+}
+
+.profile_skills .skills .bar .title{
+    float:left
+}
+
+.profile_skills .skills .bar .perc{
+    float: right;
+    margin-right: 100px;
+}
+
+.profile_skills .skills .bar .parent{
+    height: 2px;
+    background-color: #f8f8f8;
+    clear: both;
+   position: relative;
+   top:5px;
+}
+
+.profile_skills .skills .bar .parent span{
+    background-color: #eb5424;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    /* height: 100%; */
+}
+
+.profile_skills .skills .bar .parent span.sp1{
+   width: 100%;
+   
+}
+
+.profile_skills .skills .bar .parent span.sp2{
+    width: 90%;
+}
+
+.profile_skills .skills .bar .parent span.sp3{
+    width: 80%;
+}
+
+.profile_skills .profile .profile-title,
+.profile_skills .skills .skills-title{
+    font-size: 40px;
+}
+
+.profile_skills .profile .profile-title span,
+.profile_skills .skills .skills-title span{
+    font-weight: normal;
+}
+
+
+
+/* Media for profile + skills Style */
+
+@media screen and (max-width:557px){
+    .profile_skills .profile,
+    .profile_skills .skills{
+        width: 100%;
+        float:none;
+        margin-bottom: 20px;
+    } 
+}
+
+
+
+
+/*
+      ==============================
+            Creative Styles           
+      ==============================
+*/
+
+.creative{
+    height: 500px;
+    background: url(../images/creative/about-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* this use to fixed the pictures and scroll in it*/
+}
+
+.creative .creative-info{
+    padding-top: 100px;
+    width:50%;
+    float:right;
+}
+
+.creative .creative-info .info-title{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.creative .creative-info .info-title span{
+    font-weight: normal;
+}
+
+.creative .creative-info .info-dir{
+    font-size: 40px;
+    color: #eb5424;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.creative .creative-info .info-dir span{
+    font-weight: normal;
+}
+
+.creative .creative-info .info-desc{
+    color: #000;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.creative .creative-info .info-desc a{
+    text-decoration: none;
+}
+
+/* Media for creative style */
+
+@media screen and (max-width:991px) {
+.creative {
+    /* height: auto; */
+    height: 120vh;
+}
+.creative .creative-info {
+    width: 100%;
+    float: none;
+    padding-top: 10px;
+}    
+.creative .creative-info .info-dir{
+    font-size: 30px;
+}
+}
+
+/*
+      ==============================
+            Social Styles           
+      ==============================
+*/
+
+.social-media{
+    height: auto;
+    overflow: hidden;
+}
+
+.social-media .social{
+    width: 33.33%;
+    float: left;
+    padding: 100px 0 100px 60px;
+}
+
+
+
+.social-media .social.face{
+    background-color: #3b5998;
+}
+
+.social-media .social.twitter{
+    background-color: #498cbf;
+}
+
+.social-media .social.pin{
+    background-color: #cc2127;
+}
+
+.social-media .social .icon{
+    width: 50px;
+    height: 50px;
+    background-color:#fff;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    margin-right: 10px;
+    color: #888;
+    cursor: pointer;
+
+}
+
+.social-media .social p{
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.social-media .social p span{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.social-media .social p span.info2{
+    font-weight: normal;
+}
+
+
+/* Media for social style */
+
+@media screen and (max-width:991px) {
+    
+    .social-media .social{
+        width:100%;
+        float: none;
+    
+    }
+}
+
+
+/*
+      ==============================
+            Drop Styles           
+      ==============================
+*/
+
+.drop{
+    padding: 50px;
+    text-align: center;
+}
+
+.drop .drop-title{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.drop .drop-title span {
+    font-weight: normal;
+}
+
+.drop form {
+    width: 90%;
+    margin: auto;
+}
+
+.drop form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    outline: none;
+}
+
+.drop form .form-input{
+    overflow: hidden;
+}
+
+.drop form .form-input input{
+ width: 49%;
+}
+
+.drop form .form-input input[type=text]{
+    float: left;
+}
+
+.drop form .form-input input[type=email]{
+    float: right;
+}
+
+.drop form input.sub{
+    width: 100%;
+}
+
+.drop form textarea{
+    width: 100%;
+    background-color: #ccc;
+    outline: none;
+}
+
+.drop form input[type=submit]{
+    width: 60%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #888;
+    cursor: pointer;
+}
+
+
+/* Media for drop style */
+@media screen and (max-width:575px) {
+.drop .drop-title {
+    font-size: 40px;
+}    
+
+.drop form .form-input input{
+    width: 100%;
+   }
+}
+
+/*
+      ==============================
+            Footer Styles           
+      ==============================
+*/
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer p{
+    color: #888;
+}
+
+
+
+
+
+
+/* 
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width : 575px){ ... }
+
+// Extra small devices (landscape phones, less than 576px)
+@media (max-width : 767px){ ... }
+
+// Extra small devices (tablets, less than 576px)
+@media (max-width : 991px){ ... }
+
+// Extra small devices (desktops, less than 576px)
+@media (max-width : 1199px){ ... }
+
+
+*/
